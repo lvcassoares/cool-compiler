@@ -5,30 +5,6 @@
 #include <string>
 #include <vector>
 
-// ============================================================================
-// AST.hpp  (Árvore Sintática Abstrata)
-// ----------------------------------------------------------------------------
-// Unidade 2 do pipeline: a *saída* do parser e a *entrada* do analisador
-// semântico. É o contrato que desacopla sintaxe de semântica:
-//
-//   Lexer --(Token)--> Parser --(ProgramASTNode)--> SemanticAnalyzer
-//
-// Todas as fases posteriores (semântica, geração de código) trabalham sobre
-// esta árvore e nunca mais veem o texto-fonte nem os tokens.
-//
-// Hierarquia:
-//   ASTNode
-//    ├── ExprNode
-//    │    ├── IntASTNode / StringASTNode / BoolASTNode / ObjectASTNode
-//    │    ├── AssignASTNode / BinaryOpASTNode / UnaryOpASTNode / NewASTNode
-//    │    ├── DispatchASTNode / LocalCallASTNode
-//    │    ├── IfASTNode / WhileASTNode / BlockASTNode / LetASTNode / CaseASTNode
-//    ├── FormalASTNode
-//    ├── FeatureASTNode
-//    ├── ClassASTNode
-//    └── ProgramASTNode
-// ============================================================================
-
 class ASTNode {
 public:
     int line = 0;  // Linha do código onde o nó foi criado (para erros)
