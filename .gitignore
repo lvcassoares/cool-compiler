@@ -1,0 +1,16 @@
+# Binários e artefatos de build
+/coolc
+/coolc.exe
+src/*.o
+src/*.obj
+tests/build/
+build/
+cmake-build-*/
+
+# Editor / SO
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
